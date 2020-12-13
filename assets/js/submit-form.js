@@ -14,7 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
       description: document.querySelector("#description").value,
     };
     console.log(data);
-    const response = await axios.post("http://localhost:3000/", data);
+    const response = await axios.post(
+      "https://replica-tripadvisor.herokuapp.com/",
+      data
+    );
     console.log(response);
     if (response.status !== 200) {
       alert("Le formulaire n'a pas pu être envoyé");

@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/icones.css" />
+    <link rel="stylesheet" href="./assets/css/fonts.css" />
+    <title>Tripadvisor</title>
+    <script
+      src="https://kit.fontawesome.com/6a9ad8fda9.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="assets/js/modal.js"></script>
+    <script src="assets/js/nav-bar.js"></script>
+    <script src="assets/js/submit-form.js"></script>
+  </head>
+  <body>
+    <header class="container">
+      <i class="icon-menu_bars hidden"></i>
+      <img src="./assets/img/logo.svg" alt="logo-tripadvisor" />
+      <div class="search-container">
+        <i class="icon-search"></i>
+        <input id="search-bar" class="search" type="search" />
+      </div>
+      <nav>
+        <div><i class="icon-plus_c"></i><span>Publier</span></div>
+        <div><i class="icon-notification_bell"></i><span>Alertes</span></div>
+        <div><i class="icon-heart"></i><span>Voyages</span></div>
+        <button id="signIn">Connectez-vous</button>
+      </nav>
+      <i class="icon-search hidden"></i>
+    </header>
+    <main>
+      <section class="city">
+        <h1><span>Explorez</span> Saint-Cyr-sur-Mer</h1>
+        <div id="nav-container">
+          <nav class="navigation-menu">
+            <h1 id="nav-title" class="navigation-title">
+              <span>
+                <span>Explorer</span>
+                <span>Saint-Cyr-sur-Mer</span>
+              </span>
+            </h1>
+            <div class="option option-width">
+              <span>Hôtels</span>
+              <i class="icon-hotels"></i>
+            </div>
+            <div class="option option-width">
+              <span>Locations de vacances</span>
+              <i class="icon-vacation_rentals"></i>
+            </div>
+            <div class="option option-width">
+              <span>Activités</span>
+              <i class="icon-attractions"></i>
+            </div>
+            <div class="option option-width">
+              <span>Restaurants</span>
+              <i class="icon-restaurants"></i>
+            </div>
+            <div class="option option-width">
+              <span>Forums de voyage</span>
+              <i class="icon-forums"></i>
+            </div>
+            <div class="option option-width">
+              <span>Vols</span>
+              <i class="icon-flights"></i>
+            </div>
+            <div class="hidden option option-width">
+              <span>Voiture de location</span>
+              <i class="icon-rental_cars"></i>
+            </div>
+            <div class="option option-width">
+              <span>Plus</span>
+              <i class="icon-more_horizontal"></i>
+            </div>
+          </nav>
+          <div class="hidden">
+            <div>
+              <i class="icon-single_chevron_right"></i>
+            </div>
+          </div>
+        </div>
+        <div class="pictures container">
+          <div class="col-1">
+            <img src="./assets/img/photo-1.jpg" alt="crique sous-marin" />
+            <button>
+              <i class="icon-photo"></i><span>Toutes les photos</span>
+            </button>
+          </div>
+          <div class="city-col-2">
+            <img src="./assets/img/photo-2.jpg" alt="" />
+            <img src="./assets/img/photo-3.jpg" alt="" />
+          </div>
+        </div>
+        <div class="tree-localisation container">
+          <div>
+            <span>Europe</span>
+            <i class="icon-single_chevron_right"></i>
+            <span>France</span>
+            <i class="icon-single_chevron_right"></i>
+            <span>Provence-Alpes-Côte d'Azur</span>
+            <i class="icon-single_chevron_right"></i>
+            <span>Var</span>
+            <i class="icon-single_chevron_right"></i>
+            <span>Saint-Cyr-sur-Mer</span>
+            <i class="icon-caret_down"></i>
+          </div>
+          <div>
+            <span>Visiter : Saint-Cyr-sur-Mer</span>
+          </div>
+        </div>
+        <div class="container">
+          <div>
+            <h3>Commencez à organiser Saint-Cyr-sur-Mer</h3>
+            <p>
+              Créez un voyage pour enregistrer et organiser toutes vos idées et
+              les visualiser sur une carte.
+            </p>
+            <button>Créez un voyage</button>
+          </div>
+          <div id="map"></div>
+        </div>
+      </section>
+      <!--------------------------SECTION IMMANQUABLE ------------>
+      <section class="unmissable container">
+        <div class="section-title">
+          <div class="line"></div>
+          <h2>Immanquable à Saint-Cyr-sur-Mer</h2>
+          <div class="line"></div>
+        </div>
+        <!----------------------- SE DIVERTIR ------->
+        <div class="details">
+          <div class="arrow-right">
+            <i class="icon-arrow_right"></i>
+          </div>
+          <div class="col-1 topic">
+            <h3>Se divertir</h3>
+            <p>
+              Des lieux à voir, des rues à explorer et des expériences
+              emblématiques.
+            </p>
+            <span class="display-all">Tout afficher</span>
+          </div>
+          <div class="col-2">
+            <div class="carrousel-col unmissable-carrousel">
+              <div>
+                <img src="./assets/img/loisirs/spa.jpg" alt="spa" />
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+              <h5>Les Bains d'Or & Spa</h5>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_half"></i>
+              <span>122 avis</span>
+              <p>Spas</p>
+            </div>
+            <div class="carrousel-col unmissable-carrousel">
+              <div>
+                <img
+                  src="./assets/img/loisirs/moulin.jpg"
+                  alt="moulin epicerie"
+                />
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+              <h5>Moulin de Saint Come</h5>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_half"></i>
+              <i class="icon-bubble_rating_empty"></i>
+              <span>24 avis</span>
+              <p>Visites d'entreprises</p>
+              <p>A 1,5 kilomètre de Saint-Cyr-sur-Mer</p>
+              <p>La Cadière d'Azur, France</p>
+            </div>
+            <div class="carrousel-col unmissable-carrousel">
+              <div>
+                <img
+                  src="./assets/img/loisirs/musee.jpg"
+                  alt="musee histoire"
+                />
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+              <h5>Musée de Tauroentum</h5>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_empty"></i>
+              <span>14 avis</span>
+              <p>Musée d'histoire</p>
+            </div>
+            <div class="carrousel-col unmissable-carrousel">
+              <div>
+                <img
+                  src="./assets/img/loisirs/office-de-tourisme.jpg"
+                  alt="office tourisme"
+                />
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+              <h5>Office de Tourisme de Saint-Cyr-sur-Mer</h5>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_empty"></i>
+              <span>33 avis</span>
+              <p>Office de tourisme</p>
+            </div>
+            <div class="carrousel-col unmissable-carrousel">
+              <div>
+                <img
+                  src="./assets/img/loisirs/gyropode.jpg"
+                  alt="loisir gyroboard"
+                />
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+              <h5>Azur Gyroboard</h5>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <span>1 avis</span>
+              <p>Location de matériel</p>
+            </div>
+            <div class="carrousel-col unmissable-carrousel">
+              <div>
+                <img
+                  src="./assets/img/loisirs/bateau-2.jpg"
+                  alt="balade en mer"
+                />
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+              <h5>Association Parenthèse Marine</h5>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <span>2 avis</span>
+              <p>Circuits de pêche en mer</p>
+            </div>
+            <div class="carrousel-col unmissable-carrousel">
+              <div>
+                <img
+                  src="./assets/img/loisirs/parachute.jpg"
+                  alt="parachute loisir"
+                />
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+              <h5>Saint Cyr Parachute Ascensionnel</h5>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_half"></i>
+              <span>29 avis</span>
+              <p>Autres activités de plein air</p>
+            </div>
+            <div class="carrousel-col unmissable-carrousel">
+              <div>
+                <img
+                  src="./assets/img/loisirs/bateau.jpg"
+                  alt="bateau balade"
+                />
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+              <h5>Lecques Oxymer</h5>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <span>52 avis</span>
+              <p>Location de bateaux, Plongée sous-marine & PMT</p>
+            </div>
+            <div class="carrousel-col unmissable-carrousel">
+              <div>
+                <img
+                  src="./assets/img/loisirs/jetski.jpg"
+                  alt="sports nautiques"
+                />
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+              <h5>SAINT CYR JET SKI</h5>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <span>25 avis</span>
+              <p>Sports nautiques</p>
+            </div>
+            <div class="carrousel-col unmissable-carrousel">
+              <div>
+                <img src="./assets/img/loisirs/centre-de-plongee.jpg" alt="" />
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+              <h5>Lecques Aquanaut</h5>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <span>33 avis</span>
+              <p>Plongée sous-marine & PMT</p>
+            </div>
+          </div>
+        </div>
+        <!----------------------- SE REPOSER ------->
+        <div class="details">
+          <div class="arrow-right">
+            <i class="icon-arrow_right"></i>
+          </div>
+          <div class="col-1 topic">
+            <h3>Se reposer</h3>
+            <p>Un mélange de charme, de modernité et de valeurs sûres.</p>
+            <span class="display-all">Tout afficher</span>
+          </div>
+          <div class="col-2">
+            <div class="carrousel-col unmissable-carrousel">
+              <div>
+                <img src="./assets/img/reposer/tapis-sable.jpg" alt="hotel" />
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+              <h5>Au tapis de sable</h5>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_empty"></i>
+              <span>118 avis</span>
+            </div>
+            <div class="carrousel-col unmissable-carrousel">
+              <div>
+                <img
+                  src="./assets/img/reposer/ibis-budget-saint-cyr.jpg"
+                  alt="moulin epicerie"
+                />
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+              <h5>ibis budget Saint Cyr sur mer La Ciotat</h5>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_half"></i>
+              <i class="icon-bubble_rating_empty"></i>
+              <span>432 avis</span>
+            </div>
+            <div class="carrousel-col unmissable-carrousel">
+              <div>
+                <img
+                  src="./assets/img/reposer/grand-hotel.jpg"
+                  alt="musee histoire"
+                />
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+              <h5>Grand Hotel Les Lecques</h5>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_half"></i>
+              <i class="icon-bubble_rating_empty"></i>
+              <span>641 avis</span>
+            </div>
+            <div class="carrousel-col unmissable-carrousel">
+              <div>
+                <img
+                  src="./assets/img/reposer/dolce-fregate.jpg"
+                  alt="office tourisme"
+                />
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+              <h5>Dolce Frégate Provence</h5>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_half"></i>
+              <i class="icon-bubble_rating_empty"></i>
+              <span>1940 avis</span>
+            </div>
+            <div class="carrousel-col unmissable-carrousel">
+              <div>
+                <img
+                  src="./assets/img/reposer/hotel-campagne.jpg"
+                  alt="loisir gyroboard"
+                />
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+              <h5>Hôtel Chanteplage</h5>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_half"></i>
+              <i class="icon-bubble_rating_empty"></i>
+              <span>82 avis</span>
+            </div>
+            <div class="carrousel-col unmissable-carrousel">
+              <div>
+                <img
+                  src="./assets/img/reposer/petit-nice.jpg"
+                  alt="balade en mer"
+                />
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+              <h5>Le Petit Nice</h5>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_half"></i>
+              <i class="icon-bubble_rating_empty"></i>
+              <span>60 avis</span>
+            </div>
+            <div class="carrousel-col unmissable-carrousel">
+              <div>
+                <img
+                  src="./assets/img/reposer/les-palmiers.jpg"
+                  alt="parachute loisir"
+                />
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+              <h5>Hôtel Beauséjour Les Palmiers</h5>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_half"></i>
+              <span>97 avis</span>
+            </div>
+            <div class="carrousel-col unmissable-carrousel">
+              <div>
+                <img
+                  src="./assets/img/reposer/bastide-de-fontvieille.jpg"
+                  alt="bateau balade"
+                />
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+              <h5>Bastide de Fontvielle</h5>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <span>92 avis</span>
+            </div>
+            <div class="carrousel-col unmissable-carrousel">
+              <div>
+                <img
+                  src="./assets/img/reposer/le-patio.jpg"
+                  alt="sports nautiques"
+                />
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+              <h5>Le Patio</h5>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <span>25 avis</span>
+            </div>
+            <div class="carrousel-col unmissable-carrousel">
+              <div>
+                <img src="./assets/img/loisirs/centre-de-plongee.jpg" alt="" />
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+              <h5>Clos B&B</h5>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_half"></i>
+              <span>15 avis</span>
+            </div>
+          </div>
+        </div>
+        <!----------------------- SE RESTAURER ------->
+        <div class="details">
+          <div class="arrow-right">
+            <i class="icon-arrow_right"></i>
+          </div>
+          <div class="col-1 topic">
+            <h3>Se restaurer</h3>
+            <p>Lieux incontournables où manger, boire et faire la fête.</p>
+            <span class="display-all">Tout afficher</span>
+          </div>
+          <div class="col-2">
+            <div class="carrousel-col unmissable-carrousel">
+              <div>
+                <img
+                  src="./assets/img/restaurer/plage-sophie.jpg"
+                  alt="hotel"
+                />
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+              <h5>La Plage de Sophie</h5>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_half"></i>
+              <span>333 avis</span>
+              <p>€€-€€€ • Française, Méditerranéenne, Végétariens bienvenus</p>
+            </div>
+            <div class="carrousel-col unmissable-carrousel">
+              <div>
+                <img
+                  src="./assets/img/restaurer/cabanita.jpg"
+                  alt="moulin epicerie"
+                />
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+              <h5>La Cabanita Des Lecques</h5>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_half"></i>
+              <span>250 avis</span>
+              <p>€€-€€€ • Française, Méditerranéenne</p>
+            </div>
+            <div class="carrousel-col unmissable-carrousel">
+              <div>
+                <img
+                  src="./assets/img/restaurer/le-resto.jpg"
+                  alt="musee histoire"
+                />
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+              <h5>Le RestÖ</h5>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_half"></i>
+              <span>709 avis</span>
+              <p>€€-€€€ • Italienne, Française, Méditerranéenne</p>
+            </div>
+            <div class="carrousel-col unmissable-carrousel">
+              <div>
+                <img
+                  src="./assets/img/restaurer/chicoulon.jpg"
+                  alt="office tourisme"
+                />
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+              <h5>Ô Chicoulon</h5>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <span>94 avis</span>
+              <p>€€-€€€ • Brésilienne, Barbecues/Grillades</p>
+            </div>
+            <div class="carrousel-col unmissable-carrousel">
+              <div>
+                <img
+                  src="./assets/img/restaurer/restaurant-le-m.jpg"
+                  alt="loisir gyroboard"
+                />
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+              <h5>Restaurant Le M</h5>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_half"></i>
+              <span>473 avis</span>
+              <p>€€-€€€ • Française, Méditerranéenne, Végétariens bienvenus</p>
+            </div>
+            <div class="carrousel-col unmissable-carrousel">
+              <div>
+                <img
+                  src="./assets/img/restaurer/les-quatre-vents.jpg"
+                  alt="balade en mer"
+                />
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+              <h5>Les Quatres Vents</h5>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_empty"></i>
+              <span>347 avis</span>
+              <p>€€-€€€ • Italienne, Française, Méditerranéenne</p>
+            </div>
+            <div class="carrousel-col unmissable-carrousel">
+              <div>
+                <img
+                  src="./assets/img/restaurer/villa-marine.jpg"
+                  alt="parachute loisir"
+                />
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+              <h5>La Villa Marine</h5>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_half"></i>
+              <span>105 avis</span>
+              <p>€€-€€€ • Française, Fruits de Mer & Poissons, Diner</p>
+            </div>
+            <div class="carrousel-col unmissable-carrousel">
+              <div>
+                <img
+                  src="./assets/img/restaurer/equateur.jpg"
+                  alt="bateau balade"
+                />
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+              <h5>L'Equateur</h5>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_empty"></i>
+              <span>357 avis</span>
+              <p>€€-€€€ • Française, Méditerranéene , Européene</p>
+            </div>
+            <div class="carrousel-col unmissable-carrousel">
+              <div>
+                <img
+                  src="./assets/img/restaurer/la-pistache.jpg"
+                  alt="sports nautiques"
+                />
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+              <h5>La Pistache</h5>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_half"></i>
+              <span>571 avis</span>
+              <p>€€-€€€ • Française, Fruits de Mer & Poissons, Diner</p>
+            </div>
+            <div class="carrousel-col unmissable-carrousel">
+              <div>
+                <img
+                  src="./assets/img/restaurer/l-aquarium-coquillages.jpg"
+                  alt=""
+                />
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+              <h5>L'Aquarium: Coquillages&Crustacés</h5>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_half"></i>
+              <span>134 avis</span>
+              <p>
+                €€-€€€ • Française, Fruits de Mer & Poissons, Méditerranéene
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-------------------------- SECTION RENT ------------>
+      <section class="rent container">
+        <div class="section-title">
+          <div class="line"></div>
+          <h2>Louez un logement pour votre prochaine escapade</h2>
+          <div class="line"></div>
+        </div>
+        <div>
+          <h3>Locations populaires à Saint-Cyr-sur-Mer</h3>
+          <span class="display-all">Tout afficher</span>
+        </div>
+        <div>
+          <div class="arrow-right rent-arrow">
+            <i class="icon-arrow_right"></i>
+          </div>
+          <div>
+            <div class="carrousel-col rent-carrousel">
+              <div>
+                <img src="./assets/img/locations/loc-1.jpg" alt="" />
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+              <h5>
+                Villa avec piscine et vue imprenable sur les vignobles, plage à
+                10minutes à pied
+              </h5>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_half"></i>
+              <span>40 avis</span>
+              <p>8 couchages • 4 chambres • 2 salles de bain</p>
+            </div>
+            <div class="carrousel-col rent-carrousel">
+              <div>
+                <img
+                  src="./assets/img/locations/loc-2-pinede.jpg"
+                  alt="villa piscine"
+                />
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+              <h5>
+                Villa La Pinède, classé 5* de tourisme entre mer et vignes Les
+                Lecques
+              </h5>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_half"></i>
+              <span>134 avis</span>
+              <p>10 couchages • 5 chambres • 5 salles de bain</p>
+            </div>
+            <div class="carrousel-col rent-carrousel">
+              <div>
+                <img src="./assets/img/locations/loc-3-bastide.jpg" alt="" />
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+              <h5>Bastide Provencale de charme 14 voyageurs 5 mn de la mer</h5>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_half"></i>
+              <span>134 avis</span>
+              <p>14 couchages • 6 chambres • 5 salles de bain</p>
+            </div>
+            <div class="carrousel-col rent-carrousel">
+              <div>
+                <img src="./assets/img/locations/loc-4.jpg" alt="" />
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+              <h5>Villa dans domaine privé, mer, piscine & tennis</h5>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <span>2 avis</span>
+              <p>14 couchages • 5 chambres • 3 salles de bain</p>
+              <span>à partir de 537€/nuit</span>
+            </div>
+            <div class="carrousel-col rent-carrousel">
+              <div>
+                <img src="./assets/img/locations/loc-5-amiradou.jpg" alt="" />
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+              <h5>L'amiradou - Saint Cyr Sur Mer</h5>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_half"></i>
+              <span>1 avis</span>
+              <p>4 couchages • 2 chambres • 2 salles de bain</p>
+              <span>à partir de 136€/nuit</span>
+            </div>
+            <div class="carrousel-col rent-carrousel">
+              <div>
+                <img src="./assets/img/locations/loc-6-t3.jpg" alt="" />
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+              <h5>T3 trés calme à la Madrague</h5>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <span>2 avis</span>
+              <p>6 couchages • 2 chambres • 1 salles de bain</p>
+            </div>
+            <div class="carrousel-col rent-carrousel">
+              <div>
+                <img src="./assets/img/locations/loc-7.jpg" alt="" />
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+              <h5>
+                Magnfique villa provençale piscine privée chauffée à 2 pas du
+                village et mer !
+              </h5>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <span>1 avis</span>
+              <p>10 couchages • 4 chambres • 3 salles de bain</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!------------------ SECTION MORE ----------------->
+      <section class="more container">
+        <div class="section-title">
+          <div class="line"></div>
+          <h2>Plus de choix à Saint-Cyr-sur-Mer</h2>
+          <div class="line"></div>
+        </div>
+        <div>
+          <h3>Restaurants bon marché</h3>
+          <span class="display-all">Tout afficher</span>
+        </div>
+        <div>
+          <div class="arrow-right more-arrow">
+            <i class="icon-arrow_right"></i>
+          </div>
+          <div>
+            <div class="carrousel-col more-carrousel">
+              <div>
+                <img src="./assets/img/more/1-luciano-pizza.jpg" alt="hotel" />
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+              <h5>Luciano Pizza</h5>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_half"></i>
+              <span>215 avis</span>
+              <p>€ • Italiennes, Végétariens bienvenus</p>
+            </div>
+            <div class="carrousel-col more-carrousel">
+              <div>
+                <img src="./assets/img/more/2-secrets-glaces.jpg" alt="hotel" />
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+              <h5>Secrets de Glaces</h5>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <span>75 avis</span>
+              <p>€ • Dessert, Française</p>
+            </div>
+            <div class="carrousel-col more-carrousel">
+              <div>
+                <img src="./assets/img/more/3-snacky.jpg" alt="hotel" />
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+              <h5>Snack Le SKY</h5>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_half"></i>
+              <span>63 avis</span>
+              <p>€ • Restauration rapide</p>
+            </div>
+            <div class="carrousel-col more-carrousel">
+              <div>
+                <img src="./assets/img/more/4-virages.jpg" alt="hotel" />
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+              <h5>Le virage</h5>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_full"></i>
+              <i class="icon-bubble_rating_half"></i>
+              <span>46 avis</span>
+              <p>€• Française, Saine</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div>
+        <p>Created by Arthur Chen @Le Reacteur</p>
+        <div>
+          <a href="https://www.linkedin.com/in/arthur-chen-283857186/">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/Azijin">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <div>
+          <i class="icon-times close"></i>
+          <p>Formulaire d'inscription</p>
+          <span id="confirmation">
+            Le formulaire a bien été envoyé.<br />
+            Un mail de confirmation vous a été envoyé.<br />
+            Pensez à vérifier vos spams ;)
+          </span>
+          <form id="contactForm" method="post" action="">
+            <input
+              type="text"
+              name="firstname"
+              id="firstname"
+              value="arthur"
+              placeholder="Prénom"
+              required
+              autocomplete="given-name"
+            />
+            <input
+              type="text"
+              name="surname"
+              id="surname"
+              value="chen"
+              placeholder="Nom"
+              required
+              autocomplete="family-name"
+            />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              value="mcpinkgc@gmail.com"
+              placeholder="Email"
+              required
+              autocomplete="email"
+            />
+            <input
+              type="password"
+              name="password"
+              id="password"
+              value="azerty"
+              placeholder="Mot de passe"
+              required
+              autocomplete="new-password"
+            />
+            <textarea
+              name="description"
+              id="description"
+              cols="40"
+              rows="5"
+              placeholder="Décrivez-vous en quelques lignes"
+              value="description"
+            ></textarea>
+            <button
+              id="submit-form"
+              type="submit"
+              value="Envoyer le formulaire"
+            >
+              Envoyer le formulaire
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

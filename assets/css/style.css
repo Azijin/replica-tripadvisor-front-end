@@ -115,7 +115,9 @@ header nav div {
   border-radius: 12px;
   cursor: pointer;
 }
-
+header nav div:hover {
+  border-color: black;
+}
 header nav div i {
   margin-right: 5px;
 }
@@ -125,6 +127,7 @@ header span {
   font-weight: bold;
   color: #333333;
 }
+
 header nav button {
   padding: 10px 16px;
   border-radius: 20px;

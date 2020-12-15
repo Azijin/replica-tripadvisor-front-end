@@ -36,6 +36,8 @@ h2 {
   line-height: 38px;
   letter-spacing: 0.6px;
   padding: 0 12px;
+  max-width: calc(100% - 48px);
+  text-align: center;
 }
 h3 {
   font-size: 32px;
@@ -464,8 +466,8 @@ header nav button {
   min-height: 205px;
   max-height: 205px;
 }
-.unmissable :nth-child(2) .arrow-right {
-  top: calc(100% / 4);
+.entertain-arrow-1 {
+  top: calc(100% / 3.5);
 }
 /* SECTION RENT */
 .rent h3 {

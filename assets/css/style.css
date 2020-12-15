@@ -65,6 +65,11 @@ button:hover {
   background-color: #333333;
   border-color: #333333;
 }
+.unmissable,
+.rent,
+.more {
+  margin-top: 80px;
+}
 /* HEADER RULES*/
 header {
   height: 60px;
@@ -129,7 +134,7 @@ header span {
 }
 
 header nav button {
-  padding: 10px 16px;
+  padding: 10px 26px;
   border-radius: 20px;
   height: 40px;
   font-size: 16px;
@@ -190,8 +195,6 @@ header nav button {
 }
 .carrousel-col {
   cursor: pointer;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
 }
 .carrousel-col:hover h5 {
   text-decoration: underline;
@@ -312,7 +315,9 @@ header nav button {
   height: 100%;
   margin-right: 3px;
   position: relative;
+  width: 68%;
 }
+
 .city .col-1 img {
   height: 100%;
   width: 100%;
@@ -412,9 +417,7 @@ header nav button {
 }
 
 /* UNMISSABLE*/
-.unmissable {
-  margin-top: 80px;
-}
+
 .unmissable p {
   font-size: 14px;
   line-height: 16px;
@@ -435,6 +438,10 @@ header nav button {
   line-height: 21px;
   color: #333333;
   font-family: Georgia, "Times New Roman", Times, serif;
+}
+.unmissable .col-2 {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 .unmissable .details .col-2 {
   height: 100%;
@@ -457,7 +464,9 @@ header nav button {
   min-height: 205px;
   max-height: 205px;
 }
-
+.unmissable :nth-child(2) .arrow-right {
+  top: calc(100% / 4);
+}
 /* SECTION RENT */
 .rent h3 {
   font-size: 28px;
@@ -475,6 +484,8 @@ header nav button {
   display: flex;
   overflow: hidden;
   overflow-x: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 .rent > div:nth-child(3) > div:nth-child(2)::-webkit-scrollbar {
   display: none;
@@ -485,11 +496,9 @@ header nav button {
   flex-shrink: 0;
 }
 .rent img {
-  min-height: 232px;
+  min-height: 309px;
 }
-.rent-arrow {
-  top: 25%;
-}
+
 /* SECTION MORE*/
 .more h3 {
   font-size: 28px;
@@ -508,6 +517,8 @@ header nav button {
   overflow: hidden;
   overflow-x: scroll;
   margin-bottom: 80px;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 .more > div:nth-child(3) > div:nth-child(2)::-webkit-scrollbar {
   display: none;
